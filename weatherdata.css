@@ -1,0 +1,59 @@
+:root {
+  --bg-page: #fafafa;
+  --panel-bg: #93dbfa;
+  --panel-border: darkblue;
+
+  --text-primary: #1E2A30;
+  --text-secondary: #2F3F46;
+
+  --threat-low: #2E7D32;
+  --threat-medium: #ebd834;
+  --threat-high: #eb7d34;
+  --threat-veryhigh: #eb3434;
+  --threat-severe: #960808;
+}
+
+body {
+	font-size: 18px;
+  	background: var(--bg-page);
+  	color: var(--text-primary);
+	font-family: 'Baloo Chettan 2', cursive;
+	margin: 0px;
+}
+
+
+.pageouter {max-width: 800px; margin: 0px auto; background: #fff;}
+.locationbox {display: flex; justify-content: space-between;}
+.weatherbox {background: var(--panel-bg); display: flex; flex-wrap: wrap; gap: 10px 20px; width: 100%; background: #93DBFA; border: background: linear-gradient(319deg,rgba(147, 219, 250, 1) 0%, rgba(147, 219, 250, 1) 44%, rgba(181, 239, 255, 1) 99%);}
+.weatherbox-columns {width: 60%;}
+.weatherbox-columns > div {margin: auto; text-align: center;}
+.weather-icon {width: 60px; height: 60px;}
+.weatherbox-two {display: flex; justify-content: center; align-items: center; gap: 20px;}
+
+.box-spacing {padding: 20px; box-sizing: border-box;}
+
+#weather-temperature {font-size: 3em;}
+
+.measurement {font-weight: bold;}
+
+.threat-meters-title {text-align: center; background: var(--panel-border); color: #fff;}
+
+.box-spacing {display: flex; flex-wrap: wrap; gap: 10px;}
+.threat-box {border: 1px solid gray; width: 49%; padding: 10px; box-sizing: border-box;}
+.threat-meter {display: flex; gap: 3px;}
+.threat-meter > div {width: 20%; border: 1px solid black; height: 20px;}
+
+.threat-low {background: var(--threat-low);}
+.threat-moderate {background: var(--threat-medium);}
+.threat-high {background: var(--threat-high);}
+.threat-veryhigh {background: var(--threat-veryhigh);}
+.threat-severe {background: var(--threat-severe);}
+.threat-off {opacity: .2;}
+
+
+
+@media only screen and (max-width: 600px) {
+	.threat-box {width: 100%}
+	.weatherbox-columns {width: 100%; margin: auto; margin-bottom: 20px;}
+}
+

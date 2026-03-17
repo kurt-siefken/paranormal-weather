@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html><head>
+<title>Paranormal Weather Index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="weatherdata.css">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<script type="text/javascript" src="weatherdata.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<div class="pageouter">
+
+<div class="locationbox box-spacing">
+
+<div id="weather-location" class="measurement">Enter your zip code for current weather</div>
+
+<form id="zipform">
+  <label for="zipcode">Zip Code:</label>
+  <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code">
+  <button type="submit" id="FindCityData">Go!</button>
+</form>
+
+</div>
+
+<div class="weatherbox  box-spacing">
+
+	<div class="weatherbox-columns">
+		<div class="weatherbox-two"><img class="weather-icon" id="weather-icon"><span id="weather-temperature"></span></div>
+		<div><span id="weather-skies"></span></div>
+
+	</div><div>
+
+		<div>Humidity: <span id="weather-humidity" class="measurement"></span></div>
+		<div>Wind: <span id="weather-wind" class="measurement"></span></div>
+		<div>Sunrise: <span id="weather-sunrise" class="measurement"></span></div>
+		<div>Sunset: <span id="weather-sunset" class="measurement"></span></div>
+		<div>Moon Phase: <span id="weather-moon" class="measurement"></span></div>
+	</div>
+
+</div>
+
+<div class="threat-meters-title">CURRENT THREAT LEVELS</div>
+
+
+<div class="box-spacing">
+
+	<div class="threat-box">
+		Vampire Activity: <span id="threat-vampire"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="vampire-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="vampire-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="vampire-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="vampire-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="vampire-severe"></div>
+		</div>
+	</div>
+
+
+
+	<div class="threat-box">
+		Werewolf Activity: <span id="threat-werewolf"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="werewolf-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="werewolf-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="werewolf-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="werewolf-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="werewolf-severe"></div>
+		</div>
+	</div>
+
+
+	<div class="threat-box">
+		Swamp Monster Attack: <span id="threat-swampmonster"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="swampmonster-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="swampmonster-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="swampmonster-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="swampmonster-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="swampmonster-severe"></div>
+		</div>
+	</div>
+
+
+	<div class="threat-box">
+		Alien Invasion: <span id="threat-alien"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="alien-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="alien-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="alien-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="alien-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="alien-severe"></div>
+		</div>
+	</div>
+
+
+	<div class="threat-box">
+		Mummy Awakening: <span id="threat-mummy"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="mummy-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="mummy-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="mummy-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="mummy-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="mummy-severe"></div>
+		</div>
+	</div>
+
+	<div class="threat-box">
+		Ghost Hauntings: <span id="threat-ghost"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="ghost-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="ghost-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="ghost-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="ghost-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="ghost-severe"></div>
+		</div>
+	</div>
+
+	<div class="threat-box">
+		Dragon Activity: <span id="threat-dragon"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="dragon-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="dragon-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="dragon-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="dragon-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="dragon-severe"></div>
+		</div>
+	</div>
+
+
+	<div class="threat-box">
+		Zombie Apocalypse: <span id="threat-zombie"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="zombie-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="zombie-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="zombie-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="zombie-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="zombie-severe"></div>
+		</div>
+	</div>
+
+	<div class="threat-box">
+		Yeti Attack: <span id="threat-yeti"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="yeti-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="yeti-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="yeti-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="yeti-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="yeti-severe"></div>
+		</div>
+	</div>
+
+	<div class="threat-box">
+		Robot Uprising: <span id="threat-robot"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="robot-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="robot-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="robot-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="robot-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="robot-severe"></div>
+		</div>
+	</div>
+
+
+	<div class="threat-box">
+		Evil Clown Sightings: <span id="threat-clown"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="clown-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="clown-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="clown-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="clown-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="clown-severe"></div>
+		</div>
+	</div>
+
+
+	<div class="threat-box">
+		Buffalo Stampede: <span id="threat-stampede"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="stampede-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="stampede-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="stampede-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="stampede-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="stampede-severe"></div>
+		</div>
+	</div>
+
+
+	<div class="threat-box">
+		Pushy Car Salesmen: <span id="threat-salesmen"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="salesmen-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="salesmen-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="salesmen-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="salesmen-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="salesmen-severe"></div>
+		</div>
+	</div>
+
+	<div class="threat-box">
+		Existential Angst: <span id="threat-angst"></span>
+		<div class="threat-meter">
+			<div class="threat-meter-box threat-low threat-off" id="angst-low"></div>
+			<div class="threat-meter-box threat-moderate threat-off" id="angst-moderate"></div>
+			<div class="threat-meter-box threat-high threat-off" id="angst-high"></div>
+			<div class="threat-meter-box threat-veryhigh threat-off" id="angst-veryhigh"></div>
+			<div class="threat-meter-box threat-severe threat-off" id="angst-severe"></div>
+		</div>
+	</div>
+
+
+
+
+</div>
+<br><br><br><br>
+
+</div>
+
+
+</body>
